@@ -22,15 +22,15 @@ const Login = () => {
       const provider = new GoogleAuthProvider();
       const { user } = await signInWithPopup(auth, provider);
 
-      console.log({
-        name: user.displayName!,
-        email: user.email!,
-        photo: user.photoURL!,
-        gender,
-        role: "user",
-        dob: date,
-        _id: user.uid,
-      });
+      // console.log({
+      //   name: user.displayName!,
+      //   email: user.email!,
+      //   photo: user.photoURL!,
+      //   gender,
+      //   role: "user",
+      //   dob: date,
+      //   _id: user.uid,
+      // });
 
       const res = await login({
         name: user.displayName!,
@@ -43,7 +43,7 @@ const Login = () => {
       });
 
       if ("data" in res) {
-        toast.success(res.data.message);
+        // toast.success(res.data.message);
         const data = await getUser(user.uid);
         dispatch(userExist(data?.user!));
       } else {
