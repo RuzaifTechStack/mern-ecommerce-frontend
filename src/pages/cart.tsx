@@ -72,8 +72,8 @@ const Cart = () => {
         cartItems.map((i, idx) => (
           <CartItemCard
            incrementHandler={incrementHandler}
-           decrementtHandler={decrementtHandler}
-           removetHandler={removeHandler}
+           decrementHandler={decrementtHandler}
+           removeHandler={removeHandler}
           key={idx} cartItem={i}/>
          )) 
       ): (<h1>No Items Added</h1>)
