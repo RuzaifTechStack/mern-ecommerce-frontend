@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Column } from "react-table";
 import TableHOC from "../components/admin/TableHOC";
-import { Skeleton } from "../components/loader";
+// import { Skeleton } from "../components/loader";
 import { useMyOrdersQuery } from "../redux/api/orderAPI";
 import { CustomError } from "../types/api-types";
 import { RootState } from "../redux/store";
@@ -93,7 +93,8 @@ const Orders = () => {
   return (
     <div className="container">
       <h1>My Orders</h1>
-      {isLoading ? <Skeleton length={20} /> : Table}
+          {Table}
+{/*       {isLoading ? <Skeleton length={20} /> : Table} */}
     </div>
   );
 };
