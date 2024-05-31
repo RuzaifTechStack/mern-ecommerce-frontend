@@ -48,7 +48,8 @@ const column: Column<DataType>[] = [
 const Orders = () => {
   const {user} = useSelector((state: RootState)=> state.userReducer);
 
-  const { isLoading, data, isError, error } = useMyOrdersQuery(user?._id!);
+  const {data, isError, error } = useMyOrdersQuery(user?._id!);
+  // const { isLoading, data, isError, error } = useMyOrdersQuery(user?._id!);
 
   const [rows, setRows] = useState<DataType[]>([]);
 
